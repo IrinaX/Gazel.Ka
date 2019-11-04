@@ -1,53 +1,56 @@
-@media screen and (min-width: 1410px) and (max-width: 1916px) {
-	.about-company {
-		background: url(../images/man.png) -14px 18px no-repeat, url(../images/truck.png) right -7px no-repeat;
-		color: #393333;
-		line-height: 136.69%;
-	}
-}
-@media screen and (min-width: 1200px) and (max-width: 1410px) {
-	.about-company {
-		background: url(../images/man.png) -193px 18px no-repeat, url(../images/truck.png) right -7px no-repeat;
-	}
-}
 @media screen and (max-width: 1199px) {
-	.contacts {
+	.nav-contacts {
 		margin-bottom: 55px;
 	}
-	.about-company {
-		background: url(../images/truck.png) right -7px no-repeat;
-	}
 }
+
 @media screen and (max-width: 575px) {
 	.header-content__title {
 		font-size: 60px;
 	}
+
 	.header-content__subtitle {
 		font-size: 30px;
 		line-height: 40px;
 	}
-	.stock-content {
-		height: 0;
-	}
+
 	.title {
 		font-weight: bold;
 		font-size: 51px;
 	}
+
 	.feedback__title, .advantages__title {
 		font-size: 41px;
 	}
 }
+
 @media screen and (max-width: 385px) {
-	.swiper-button-next img {
+	.swiper-button-next img, .swiper-button-prev img {
 		display: inline-block;
 		width: 39px !important;
 		height: 39px !important;
 		max-width: max-content;
 	}
-	.swiper-button-prev img {
-		display: inline-block;
-		width: 39px !important;
-		height: 39px !important;
-		max-width: max-content;
+
+}
+
+@media screen and (min-width: 576px) {
+	.modal-dialog {
+		margin: 10.375rem auto;
+	}
+}
+@media screen and (max-width: 369px) {
+	.hided-block {
+		height: 549px;
+	}
+}
+@media screen and (min-width: 370px) and (max-width: 575px) {
+	.hided-block {
+		height: 494px;
+	}
+}
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+	.hided-block {
+		height: 613px;
 	}
 }

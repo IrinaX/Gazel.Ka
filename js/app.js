@@ -1,6 +1,22 @@
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
+var swiperStock = new Swiper('.swiper-stock', {
+
     spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.stock-content__button-next',
+
+    },
+});
+
+var swiper = new Swiper('.our-transport__swiper', {
+    slidesPerView: 3,
+    spaceBetween: 25,
     slidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,
@@ -17,6 +33,10 @@ var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             slidesPerGroup: 1,
         },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
         1024: {
             slidesPerView: 3,
             slidesPerGroup: 3,
@@ -25,23 +45,14 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 const form = document.querySelector('form'),
-    hidedBlock = document.querySelector('.hidedBlock'),
-    requestACall = document.querySelector('.btn-primary'),
-    hidedBlockModal = document.querySelector('.hidedBlockModal');
-form.addEventListener('submit', tyuForAttention);
-requestACall.addEventListener('click', tyuForAttention);
+    hidedBlock = document.querySelector('.hided-block'),
+    hidedBlockModal = document.querySelector('.hided-block-modal');
 
 function tyuForAttention() {
-    document.querySelector('.modal-title').style.display = 'none';
-    document.querySelector('.modal-header').style.border = 'none';
-    document.querySelector('.modal-form').style.display = 'none';
-    document.querySelector('.btn-primary').style.display = 'none';
-    document.querySelector('.btn-secondary').style.display = 'none';
-    document.querySelector('.modal-footer').style.border = 'none';
     hidedBlockModal.style.display = 'flex';
     form.classList.add('hide');
+    document.querySelector('.modal-header').classList.add('hide');
+    document.querySelector('.modal-footer').classList.add('hide');
+    document.querySelector('.modal-form').classList.add('hide');
     hidedBlock.style.display = 'flex';
 }
-
-let text = 'текст';
-console.log(text);
